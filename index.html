@@ -240,6 +240,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .podium-card.gold .podium-score { color: var(--gold); }
 .podium-card.silver .podium-score { color: var(--silver); }
 .podium-card.bronze .podium-score { color: var(--bronze); }
+/* Podium size hierarchy: 2nd ~15% smaller, 3rd ~25% smaller */
+.podium-card.silver .podium-score { font-size: 2.2rem; }
+.podium-card.bronze .podium-score { font-size: 1.9rem; }
+.podium-card.silver { padding: 15px 10px 12px; }
+.podium-card.bronze { padding: 12px 8px 10px; }
+.podium-medal { font-size: 1.6rem; margin-bottom: 2px; display: block; line-height: 1; }
+.podium-card.silver .podium-medal { font-size: 1.35rem; }
+.podium-card.bronze .podium-medal { font-size: 1.2rem; }
 .podium-name {
   font-family: var(--font-display);
   font-weight: 600;
@@ -248,6 +256,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   text-transform: uppercase;
   color: var(--text-primary);
 }
+.podium-card.silver .podium-name { font-size: 1rem; }
+.podium-card.bronze .podium-name { font-size: 0.92rem; }
 
 /* ═══════════════════════════════════════════════════════
    LEADERBOARD — PROGRESS BAR
@@ -539,12 +549,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .consensus-counts {
   display: flex;
   justify-content: space-between;
-  font-size: 0.75rem;
+  font-size: 0.88rem;
   color: var(--text-muted);
   margin-top: 4px;
   font-family: var(--font-display);
   font-weight: 500;
 }
+.consensus-counts .picker-names { font-size: 0.78rem; color: var(--text-secondary); }
 .consensus-region-header {
   font-family: var(--font-display);
   font-weight: 700;
@@ -690,7 +701,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .award-title {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -699,7 +710,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .award-winner {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   color: var(--text-primary);
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -707,7 +718,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .award-stat {
   font-family: var(--font-display);
   font-weight: 500;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   color: var(--accent-orange);
 }
 
@@ -746,9 +757,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (min-width: 640px) {
   .title { font-size: 3rem; }
   .title-year { font-size: 1.4rem; }
-  .podium-score { font-size: 3.2rem; }
-  .podium-card { padding: 24px 14px 18px; }
-  .podium-name { font-size: 1.3rem; }
+  .podium-card.gold .podium-score { font-size: 3.2rem; }
+  .podium-card.silver .podium-score { font-size: 2.7rem; }
+  .podium-card.bronze .podium-score { font-size: 2.4rem; }
+  .podium-card.gold { padding: 24px 14px 18px; }
+  .podium-card.silver { padding: 20px 12px 16px; }
+  .podium-card.bronze { padding: 16px 10px 14px; }
+  .podium-card.gold .podium-name { font-size: 1.3rem; }
+  .podium-card.silver .podium-name { font-size: 1.1rem; }
+  .podium-card.bronze .podium-name { font-size: 1rem; }
   .standings th, .standings td { padding: 8px 8px; }
   .standings .col-name { min-width: 110px; max-width: 140px; font-size: 1.05rem; }
   .standings .col-total { font-size: 1.2rem; }
@@ -1190,7 +1207,10 @@ function calculateAwards(games, participants, seedMap, scores) {
         if (g.picks[p].toLowerCase() === g.team1.toLowerCase()) t1++;
         else t2++;
       });
-      const majorityTeam = t1 >= t2 ? g.team1.toLowerCase() : g.team2.toLowerCase();
+      const total = t1 + t2;
+      // Only count if there's a clear majority (>50%), skip 50/50 splits
+      if (t1 === t2 || total === 0) return;
+      const majorityTeam = t1 > t2 ? g.team1.toLowerCase() : g.team2.toLowerCase();
       participants.forEach(p => {
         if (!g.picks[p]) return;
         const picked = g.picks[p].toLowerCase();
@@ -1226,9 +1246,11 @@ function renderLeaderboard() {
   // Podium
   const top3 = rankings.slice(0, 3);
   const medals = ['gold','silver','bronze'];
+  const medalEmojis = ['&#127942;','&#129352;','&#129353;'];
   const rankLabels = ['1ST','2ND','3RD'];
   document.getElementById('podium').innerHTML = top3.map((p, i) => `
     <div class="podium-card ${medals[i]} animate-in stagger-${i+1}">
+      <span class="podium-medal">${medalEmojis[i]}</span>
       <div class="podium-rank">${rankLabels[i]}</div>
       <div class="podium-score">${p.total}</div>
       <div class="podium-name">${esc(p.name)}</div>
@@ -1279,7 +1301,7 @@ function renderLeaderboard() {
       const val = p.byRound[r] || 0;
       let badges = '';
       if (roundMVPs[r]?.names?.includes(p.name)) badges += '<span class="badge-mvp">MVP</span>';
-      if (roundColds[r]?.names?.includes(p.name)) badges += '<span class="badge-cold">ICE</span>';
+      if (roundColds[r]?.names?.includes(p.name)) badges += '<span style="font-size:0.7rem;margin-left:2px">&#128078;</span>';
       return `<td class="col-round">${val}${badges}</td>`;
     }).join('');
 
@@ -1369,13 +1391,20 @@ function renderConsensus() {
     if (Object.keys(byRegion).length > 1) html += `<div class="consensus-region-header">${esc(region)}</div>`;
     byRegion[region].forEach(g => {
       let t1Count = 0, t2Count = 0;
-      const totalPickers = participants.filter(p => g.picks[p]).length;
-      participants.forEach(p => { if (!g.picks[p]) return; if (g.picks[p].toLowerCase() === g.team1.toLowerCase()) t1Count++; else t2Count++; });
+      const t1Pickers = [], t2Pickers = [];
+      participants.forEach(p => {
+        if (!g.picks[p]) return;
+        if (g.picks[p].toLowerCase() === g.team1.toLowerCase()) { t1Count++; t1Pickers.push(p); }
+        else { t2Count++; t2Pickers.push(p); }
+      });
+      const totalPickers = t1Count + t2Count;
       const t1Pct = totalPickers > 0 ? (t1Count / totalPickers * 100) : 50;
       const s1 = getSeed(g.team1, seedMap), s2 = getSeed(g.team2, seedMap);
       const t1W = g.winner && g.winner.toLowerCase() === g.team1.toLowerCase();
       const t2W = g.winner && g.winner.toLowerCase() === g.team2.toLowerCase();
-      html += `<div class="consensus-card"><div class="consensus-matchup"><span class="consensus-team${t1W ? ' winner' : ''}"><span class="consensus-seed">(${s1})</span> ${esc(g.team1)}</span><span class="consensus-vs">VS</span><span class="consensus-team${t2W ? ' winner' : ''}"><span class="consensus-seed">(${s2})</span> ${esc(g.team2)}</span></div><div class="consensus-bars"><div class="consensus-bar-seg team1" style="width:${t1Pct}%"></div><div class="consensus-bar-seg team2" style="width:${100-t1Pct}%"></div></div><div class="consensus-counts"><span>${t1Count} picked</span><span>${t2Count} picked</span></div></div>`;
+      const t1Names = t1Count <= 3 && t1Count > 0 ? ` <span class="picker-names">(${t1Pickers.map(esc).join(', ')})</span>` : '';
+      const t2Names = t2Count <= 3 && t2Count > 0 ? ` <span class="picker-names">(${t2Pickers.map(esc).join(', ')})</span>` : '';
+      html += `<div class="consensus-card"><div class="consensus-matchup"><span class="consensus-team${t1W ? ' winner' : ''}"><span class="consensus-seed">(${s1})</span> ${esc(g.team1)}</span><span class="consensus-vs">VS</span><span class="consensus-team${t2W ? ' winner' : ''}"><span class="consensus-seed">(${s2})</span> ${esc(g.team2)}</span></div><div class="consensus-bars"><div class="consensus-bar-seg team1" style="width:${t1Pct}%"></div><div class="consensus-bar-seg team2" style="width:${100-t1Pct}%"></div></div><div class="consensus-counts"><span>${t1Count} picked${t1Names}</span><span>${t2Count} picked${t2Names}</span></div></div>`;
     });
   }
   document.getElementById('consensus').innerHTML = html;
@@ -1388,15 +1417,32 @@ function renderUpsets() {
     document.getElementById('upsets').innerHTML = '<div class="empty-state"><span class="icon">&#128064;</span>No upsets yet — stay tuned!</div>';
     return;
   }
-  document.getElementById('upsets').innerHTML = upsets.map(u => `
-    <div class="upset-card animate-in">
-      <div class="upset-header">
-        <span class="upset-result">(${u.winSeed}) ${esc(u.winner)} over (${u.loseSeed}) ${esc(u.loser)}</span>
-        <span class="upset-round-label">${ROUND_FULL[u.round] || u.round} &bull; ${esc(u.region)}</span>
-      </div>
-      <div class="upset-callers">${u.callers.length > 0 ? `Called it: <strong>${u.callers.map(esc).join(', ')}</strong>` : 'Nobody saw it coming!'}</div>
-    </div>
-  `).join('');
+  const called = upsets.filter(u => u.callers.length > 0);
+  const missed = upsets.filter(u => u.callers.length === 0);
+  let html = '';
+  if (called.length > 0) {
+    html += '<div class="section-title" style="color:var(--correct)">Called It</div>';
+    html += called.map(u => `
+      <div class="upset-card animate-in" style="border-left-color:var(--correct);border-color:rgba(0,230,118,0.15)">
+        <div class="upset-header">
+          <span class="upset-result" style="color:var(--correct)">(${u.winSeed}) ${esc(u.winner)} over (${u.loseSeed}) ${esc(u.loser)}</span>
+          <span class="upset-round-label">${ROUND_FULL[u.round] || u.round} &bull; ${esc(u.region)}</span>
+        </div>
+        <div class="upset-callers">Called it: <strong>${u.callers.map(esc).join(', ')}</strong></div>
+      </div>`).join('');
+  }
+  if (missed.length > 0) {
+    html += '<div class="section-title" style="color:var(--wrong);margin-top:24px">No One Saw It Coming</div>';
+    html += missed.map(u => `
+      <div class="upset-card animate-in">
+        <div class="upset-header">
+          <span class="upset-result">(${u.winSeed}) ${esc(u.winner)} over (${u.loseSeed}) ${esc(u.loser)}</span>
+          <span class="upset-round-label">${ROUND_FULL[u.round] || u.round} &bull; ${esc(u.region)}</span>
+        </div>
+        <div class="upset-callers">Nobody saw it coming!</div>
+      </div>`).join('');
+  }
+  document.getElementById('upsets').innerHTML = html;
 }
 
 // ── LONE WOLVES ─────────────────────────────────────
