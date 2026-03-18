@@ -93,9 +93,49 @@ Claude should:
 ## Picks Per Round (Round-by-Round Format)
 
 Participants do NOT fill out the full bracket upfront. They pick one round at a time:
-- R64 picks due before first R64 games
-- R32 picks due before first R32 games
-- And so on through NCG
+- R64 picks → before Thursday R64 games
+- R32 picks → Saturday morning before R32 games
+- S16 picks → before Sweet 16 games
+- E8 picks → before Elite 8 games
+- F4 picks → before Final Four games
+- NCG pick → before Championship game
+
+Each round's picks go into that round's rows in the CSV. They NEVER overwrite previous round picks — each round has separate rows.
+
+## Bracket Progression (Auto-Populate Next Round Matchups)
+
+When entering game results, Claude must automatically populate the next round's Team1/Team2 when both feeder games have winners. This ensures matchups are ready before the next round's picks come in.
+
+### R64 → R32 (within each region, games paired by bracket position)
+
+Each region has 8 R64 games in this order. The winners feed into R32 as follows:
+- **R32 Slot 1**: Winner of R64 Game 1 (1v16) vs Winner of R64 Game 2 (8v9)
+- **R32 Slot 2**: Winner of R64 Game 3 (5v12) vs Winner of R64 Game 4 (4v13)
+- **R32 Slot 3**: Winner of R64 Game 5 (6v11) vs Winner of R64 Game 6 (3v14)
+- **R32 Slot 4**: Winner of R64 Game 7 (7v10) vs Winner of R64 Game 8 (2v15)
+
+### R32 → S16 (within each region)
+- **S16 Slot 1**: Winner of R32 Slot 1 vs Winner of R32 Slot 2
+- **S16 Slot 2**: Winner of R32 Slot 3 vs Winner of R32 Slot 4
+
+### S16 → E8 (within each region)
+- **E8**: Winner of S16 Slot 1 vs Winner of S16 Slot 2
+
+### E8 → F4 (cross-region, 2026 bracket)
+- **F4 Game 1**: East champion vs South champion
+- **F4 Game 2**: West champion vs Midwest champion
+
+### F4 → NCG
+- **NCG**: Winner of F4 Game 1 vs Winner of F4 Game 2
+
+### How to apply
+When Claude enters a game result (Actual_Winner):
+1. Set Actual_Winner for the completed game
+2. Identify the feeder pair for the next round (e.g., R64 games 1 and 2 in East → R32 slot 1 in East)
+3. If BOTH games in the pair now have winners, populate Team1 and Team2 in the next round's corresponding slot
+4. Team1 = winner from the higher-seeded game (earlier in the bracket), Team2 = winner from the lower-seeded game
+5. Use Python csv module for all writes
+6. Commit and push
 
 ## Play-In / First Four Games
 
