@@ -72,7 +72,9 @@ Claude should:
 5. Show Jon the parsed picks in a clear format for confirmation BEFORE committing
 6. After Jon confirms, commit with message like "Add Papa R64 picks" and push
 
-**Common abbreviations to handle**: "Mich St" → "Michigan St", "UNC" → "N. Carolina", "SJU" → "St. John's", "Nova" → "Villanova", "UVA" → "Virginia", "UK" → "Kentucky", "Bama" → "Alabama", etc.
+**Common abbreviations to handle**: "Mich St" → "Michigan St", "UNC" → "N. Carolina", "SJU" → "St. John's", "Nova" → "Villanova", "UVA" → "Virginia", "UK" → "Kentucky", "Bama" → "Alabama", "OSU" → "Ohio St", etc.
+
+**Confirmation protocol**: After parsing picks, ALWAYS show Jon the full parsed table for confirmation before writing to CSV. If any team name is too fuzzy to be 100% certain, explicitly call it out and ask Jon to clarify. Zero tolerance for mistakes — every pick must be verified correct.
 
 ### Strip Dummy Data
 
