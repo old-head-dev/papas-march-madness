@@ -723,6 +723,66 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ═══════════════════════════════════════════════════════
+   HISTORY
+   ═══════════════════════════════════════════════════════ */
+.history-year {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+.history-year-label {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  color: var(--accent-orange);
+  text-align: center;
+  margin-bottom: 16px;
+}
+.history-results {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (min-width: 640px) { .history-results { grid-template-columns: 1fr 1fr 1fr 1fr; } }
+.history-place {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 8px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+}
+.history-place.gold { border-color: rgba(255,215,0,0.2); box-shadow: 0 0 20px var(--gold-glow); }
+.history-place.silver { border-color: rgba(184,196,216,0.15); }
+.history-place.bronze { border-color: rgba(205,127,50,0.15); }
+.history-place.last { border-color: rgba(255,71,87,0.1); }
+.history-medal { font-size: 1.8rem; line-height: 1; }
+.history-rank-label {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.history-place.gold .history-rank-label { color: var(--gold); }
+.history-place.silver .history-rank-label { color: var(--silver); }
+.history-place.bronze .history-rank-label { color: var(--bronze); }
+.history-place.last .history-rank-label { color: var(--wrong); }
+.history-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+}
+
+/* ═══════════════════════════════════════════════════════
    EMPTY / LOADING STATES
    ═══════════════════════════════════════════════════════ */
 .empty-state { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.95rem; }
@@ -810,6 +870,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   <button class="nav-btn" data-view="lonewolf">Lone Wolf</button>
   <button class="nav-btn" data-view="h2h">Head-to-Head</button>
   <button class="nav-btn" data-view="awards">Awards</button>
+  <button class="nav-btn" data-view="history">History</button>
 </nav>
 
 <!-- VIEWS -->
@@ -859,6 +920,28 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   <!-- AWARDS -->
   <div id="view-awards" class="view">
     <div id="awards" class="awards-grid"></div>
+  </div>
+
+  <!-- HISTORY -->
+  <div id="view-history" class="view">
+    <div class="history-year animate-in">
+      <div class="history-year-label">2025</div>
+      <div class="history-results">
+        <div class="history-place gold"><span class="history-medal">&#127942;</span><span class="history-rank-label">1ST</span><span class="history-name">Journey</span></div>
+        <div class="history-place silver"><span class="history-medal">&#129352;</span><span class="history-rank-label">2ND</span><span class="history-name">Jada</span></div>
+        <div class="history-place bronze"><span class="history-medal">&#129353;</span><span class="history-rank-label">3RD</span><span class="history-name">Aubrey</span></div>
+        <div class="history-place last"><span class="history-medal">&#128128;</span><span class="history-rank-label">LAST</span><span class="history-name">Katy</span></div>
+      </div>
+    </div>
+    <div class="history-year animate-in stagger-2">
+      <div class="history-year-label">2024</div>
+      <div class="history-results">
+        <div class="history-place gold"><span class="history-medal">&#127942;</span><span class="history-rank-label">1ST</span><span class="history-name">Paige</span></div>
+        <div class="history-place silver"><span class="history-medal">&#129352;</span><span class="history-rank-label">2ND</span><span class="history-name">Lisa</span></div>
+        <div class="history-place bronze"><span class="history-medal">&#129353;</span><span class="history-rank-label">3RD</span><span class="history-name">Papa</span></div>
+        <div class="history-place last"><span class="history-medal">&#128128;</span><span class="history-rank-label">LAST</span><span class="history-name">Sara</span></div>
+      </div>
+    </div>
   </div>
 </main>
 
