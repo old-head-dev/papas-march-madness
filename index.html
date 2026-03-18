@@ -949,8 +949,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 /* ═══════════════════════════════════════════════════════
    CONSTANTS
    ═══════════════════════════════════════════════════════ */
-const GITHUB_CSV_URL = 'https://raw.githubusercontent.com/old-head-dev/papas-march-madness/main/bracket.csv';
-const CSV_URL = location.hostname === 'old-head-dev.github.io' ? GITHUB_CSV_URL : 'bracket.csv';
+// Relative path works both locally and on GitHub Pages — avoids raw.githubusercontent.com CDN cache
+const CSV_URL = 'bracket.csv';
 const ROUND_CODES = new Set(['R64','R32','S16','E8','F4','NCG']);
 const ROUND_ORDER = ['R64','R32','S16','E8','F4','NCG'];
 const ROUND_LABELS = { R64:'R64', R32:'R32', S16:'S16', E8:'E8', F4:'F4', NCG:'NCG' };
