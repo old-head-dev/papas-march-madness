@@ -22,6 +22,8 @@ Round,Points,Region,Team1,Team2,Actual_Winner,Papa,Jon,...,Doug
 - **Seeds**: derived from bracket position within each region (1v16, 8v9, 5v12, 4v13, 6v11, 3v14, 7v10, 2v15)
 - **Team name matching**: case-insensitive, must exactly match one of the two teams in that row
 
+**CRITICAL: NEVER hand-edit bracket.csv by manually counting commas.** The file has 22 columns and off-by-one comma errors silently shift picks to wrong participants. ALWAYS use a Python script with the `csv` module: read with `csv.reader`, modify rows as 22-element arrays, write with `csv.writer`, and verify column alignment programmatically before saving.
+
 ## Participants (16)
 
 Papa, Jon, Drew, Aubrey, Miles, Mariah, Jada, Katy, Lisa, Aaron, Mason, Journey, Sara, Paige, Korbin, Doug
