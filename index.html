@@ -1456,12 +1456,20 @@ function renderUpsets() {
     document.getElementById('upsets').innerHTML = '<div class="empty-state"><span class="icon">&#128064;</span>No upsets yet — stay tuned!</div>';
     return;
   }
-  const called = upsets.filter(u => u.callers.length > 0);
-  const missed = upsets.filter(u => u.callers.length === 0);
+  const calledUpsets = upsets.filter(u => u.callers.length > 0);
+  const noOneUpsets = upsets.filter(u => u.callers.length === 0);
+  // For "Missed It": upsets where ≥1 person called it, show who DIDN'T (picked the favorite)
+  const missedData = calledUpsets.map(u => {
+    const missers = state.participants.filter(p => {
+      const g = state.games.find(g2 => g2.winner && g2.winner.toLowerCase() === u.winner.toLowerCase() && g2.round === u.round && g2.region === u.region);
+      return g && g.picks[p] && g.picks[p].toLowerCase() !== u.winner.toLowerCase();
+    });
+    return { ...u, missers };
+  }).filter(u => u.missers.length > 0);
   let html = '';
-  if (called.length > 0) {
+  if (calledUpsets.length > 0) {
     html += '<div class="section-title" style="color:var(--correct)">Called It</div>';
-    html += called.map(u => `
+    html += calledUpsets.map(u => `
       <div class="upset-card animate-in" style="border-left-color:var(--correct);border-color:rgba(0,230,118,0.15)">
         <div class="upset-header">
           <span class="upset-result" style="color:var(--correct)">(${u.winSeed}) ${esc(u.winner)} over (${u.loseSeed}) ${esc(u.loser)}</span>
@@ -1470,15 +1478,25 @@ function renderUpsets() {
         <div class="upset-callers">Called it: <strong>${u.callers.map(esc).join(', ')}</strong></div>
       </div>`).join('');
   }
-  if (missed.length > 0) {
-    html += '<div class="section-title" style="color:var(--wrong);margin-top:24px">No One Saw It Coming</div>';
-    html += missed.map(u => `
+  if (missedData.length > 0) {
+    html += '<div class="section-title" style="color:var(--wrong);margin-top:24px">Missed It</div>';
+    html += missedData.map(u => `
       <div class="upset-card animate-in">
         <div class="upset-header">
           <span class="upset-result">(${u.winSeed}) ${esc(u.winner)} over (${u.loseSeed}) ${esc(u.loser)}</span>
           <span class="upset-round-label">${ROUND_FULL[u.round] || u.round} &bull; ${esc(u.region)}</span>
         </div>
-        <div class="upset-callers">Nobody saw it coming!</div>
+        <div class="upset-callers">Missed by: <strong style="color:var(--wrong)">${u.missers.map(esc).join(', ')}</strong></div>
+      </div>`).join('');
+  }
+  if (noOneUpsets.length > 0) {
+    html += '<div class="section-title" style="color:var(--gold);margin-top:24px">No One Saw It Coming</div>';
+    html += noOneUpsets.map(u => `
+      <div class="upset-card animate-in" style="border-left-color:var(--gold);border-color:rgba(255,215,0,0.15)">
+        <div class="upset-header">
+          <span class="upset-result" style="color:var(--gold)">(${u.winSeed}) ${esc(u.winner)} over (${u.loseSeed}) ${esc(u.loser)}</span>
+          <span class="upset-round-label">${ROUND_FULL[u.round] || u.round} &bull; ${esc(u.region)}</span>
+        </div>
       </div>`).join('');
   }
   document.getElementById('upsets').innerHTML = html;
