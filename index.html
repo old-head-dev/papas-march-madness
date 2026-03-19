@@ -1728,10 +1728,14 @@ loadData();
 
 // Auto-refresh when app returns to foreground (home screen web app)
 document.addEventListener('visibilitychange', () => {
-  if (document.visibilityState === 'visible') {
-    loadData();
-  }
+  if (document.visibilityState === 'visible') loadData();
 });
+// iOS standalone mode fallback — pageshow fires reliably when swiping back
+window.addEventListener('pageshow', (e) => {
+  if (e.persisted) loadData();
+});
+// Also catch focus events as another fallback
+window.addEventListener('focus', () => loadData());
 </script>
 </body>
 </html>
