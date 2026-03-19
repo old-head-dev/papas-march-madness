@@ -1,37 +1,37 @@
 Round,Points,Region,Team1,Team2,Actual_Winner,Papa,Jon,Drew,Aubrey,Miles,Mariah,Jada,Katy,Lisa,Aaron,Mason,Journey,Sara,Paige,Korbin,Doug
 1st Round,1,,,,,,,,,,,,,,,,,,,,
-R64,1,East,Duke,Siena,,Duke,,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke
-R64,1,East,Ohio St,TCU,,Ohio St,,Ohio St,TCU,Ohio St,Ohio St,Ohio St,Ohio St,Ohio St,TCU,Ohio St,Ohio St,TCU,TCU,TCU,TCU
-R64,1,East,St. John's,N. Iowa,,St. John's,,St. John's,St. John's,N. Iowa,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's
-R64,1,East,Kansas,Cal Baptist,,Kansas,,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas
-R64,1,East,Louisville,South Florida,,Louisville,,South Florida,South Florida,South Florida,South Florida,Louisville,Louisville,Louisville,South Florida,Louisville,South Florida,Louisville,South Florida,South Florida,Louisville
-R64,1,East,Michigan St,N. Dakota St,,Michigan St,,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St
-R64,1,East,UCLA,UCF,,UCLA,,UCF,UCF,UCF,UCLA,UCLA,UCF,UCLA,UCF,UCLA,UCLA,UCLA,UCLA,UCLA,UCLA
-R64,1,East,UConn,Furman,,UConn,,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn
-R64,1,West,Arizona,Long Island,,Arizona,,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona
-R64,1,West,Villanova,Utah St,,Utah St,,Utah St,Villanova,Utah St,Utah St,Utah St,Utah St,Utah St,Utah St,Villanova,Villanova,Villanova,Villanova,Villanova,Villanova
-R64,1,West,Wisconsin,High Point,,Wisconsin,,Wisconsin,Wisconsin,High Point,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin
-R64,1,West,Arkansas,Hawaii,,Arkansas,,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas
-R64,1,West,BYU,Texas,,BYU,,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU
-R64,1,West,Gonzaga,Kennesaw St,,Gonzaga,,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga
-R64,1,West,Miami FL,Missouri,,Missouri,,Miami FL,Missouri,Missouri,Missouri,Missouri,Missouri,Miami FL,Missouri,Miami FL,Miami FL,Miami FL,Miami FL,Missouri,Miami FL
-R64,1,West,Purdue,Queens,,Purdue,,Purdue,Queens,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
-R64,1,South,Florida,Prairie View,,Florida,,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida
-R64,1,South,Clemson,Iowa,,Iowa,,Iowa,Clemson,Iowa,Iowa,Iowa,Iowa,Iowa,Clemson,Clemson,Iowa,Iowa,Iowa,Iowa,Clemson
-R64,1,South,Vanderbilt,McNeese,,Vanderbilt,,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt
-R64,1,South,Nebraska,Troy,,Nebraska,,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska
-R64,1,South,N. Carolina,VCU,,VCU,,VCU,N. Carolina,VCU,N. Carolina,N. Carolina,N. Carolina,N. Carolina,VCU,N. Carolina,VCU,VCU,N. Carolina,N. Carolina,N. Carolina
-R64,1,South,Illinois,Penn,,Illinois,,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
-R64,1,South,Saint Mary's,Texas A&M,,Saint Mary's,,Saint Mary's,Texas A&M,Saint Mary's,Saint Mary's,Texas A&M,Texas A&M,Saint Mary's,Saint Mary's,Saint Mary's,Saint Mary's,Texas A&M,Saint Mary's,Texas A&M,Saint Mary's
-R64,1,South,Houston,Idaho,,Houston,,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston
-R64,1,Midwest,Michigan,Howard,,Michigan,,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
-R64,1,Midwest,Georgia,Saint Louis,,Saint Louis,,Georgia,Georgia,Saint Louis,Saint Louis,Georgia,Georgia,Saint Louis,Georgia,Georgia,Saint Louis,Saint Louis,Saint Louis,Saint Louis,Georgia
-R64,1,Midwest,Texas Tech,Akron,,Texas Tech,,Texas Tech,Texas Tech,Akron,Texas Tech,Akron,Akron,Texas Tech,Akron,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech
-R64,1,Midwest,Alabama,Hofstra,,Alabama,,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama
-R64,1,Midwest,Tennessee,Miami (Ohio),,Miami (Ohio),,Tennessee,Miami (Ohio),Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee
-R64,1,Midwest,Virginia,Wright St,,Virginia,,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia
-R64,1,Midwest,Kentucky,Santa Clara,,Kentucky,,Santa Clara,Santa Clara,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Santa Clara,Santa Clara,Kentucky,Kentucky
-R64,1,Midwest,Iowa St,Tennessee St,,Iowa St,,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
+R64,1,East,Duke,Siena,,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke
+R64,1,East,Ohio St,TCU,,Ohio St,Ohio St,Ohio St,TCU,Ohio St,Ohio St,Ohio St,Ohio St,Ohio St,TCU,Ohio St,Ohio St,TCU,TCU,TCU,TCU
+R64,1,East,St. John's,N. Iowa,,St. John's,St. John's,St. John's,St. John's,N. Iowa,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's
+R64,1,East,Kansas,Cal Baptist,,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas
+R64,1,East,Louisville,South Florida,,Louisville,South Florida,South Florida,South Florida,South Florida,South Florida,Louisville,Louisville,Louisville,South Florida,Louisville,South Florida,Louisville,South Florida,South Florida,Louisville
+R64,1,East,Michigan St,N. Dakota St,,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St
+R64,1,East,UCLA,UCF,,UCLA,UCLA,UCF,UCF,UCF,UCLA,UCLA,UCF,UCLA,UCF,UCLA,UCLA,UCLA,UCLA,UCLA,UCLA
+R64,1,East,UConn,Furman,,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn
+R64,1,West,Arizona,Long Island,,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona
+R64,1,West,Villanova,Utah St,,Utah St,Utah St,Utah St,Villanova,Utah St,Utah St,Utah St,Utah St,Utah St,Utah St,Villanova,Villanova,Villanova,Villanova,Villanova,Villanova
+R64,1,West,Wisconsin,High Point,,Wisconsin,Wisconsin,Wisconsin,Wisconsin,High Point,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin,Wisconsin
+R64,1,West,Arkansas,Hawaii,,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas
+R64,1,West,BYU,Texas,,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU
+R64,1,West,Gonzaga,Kennesaw St,,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga
+R64,1,West,Miami FL,Missouri,,Missouri,Miami FL,Miami FL,Missouri,Missouri,Missouri,Missouri,Missouri,Miami FL,Missouri,Miami FL,Miami FL,Miami FL,Miami FL,Missouri,Miami FL
+R64,1,West,Purdue,Queens,,Purdue,Purdue,Purdue,Queens,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
+R64,1,South,Florida,Prairie View,,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida
+R64,1,South,Clemson,Iowa,,Iowa,Iowa,Iowa,Clemson,Iowa,Iowa,Iowa,Iowa,Iowa,Clemson,Clemson,Iowa,Iowa,Iowa,Iowa,Clemson
+R64,1,South,Vanderbilt,McNeese,,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt
+R64,1,South,Nebraska,Troy,,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska
+R64,1,South,N. Carolina,VCU,,VCU,VCU,VCU,N. Carolina,VCU,N. Carolina,N. Carolina,N. Carolina,N. Carolina,VCU,N. Carolina,VCU,VCU,N. Carolina,N. Carolina,N. Carolina
+R64,1,South,Illinois,Penn,,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
+R64,1,South,Saint Mary's,Texas A&M,,Saint Mary's,Saint Mary's,Saint Mary's,Texas A&M,Saint Mary's,Saint Mary's,Texas A&M,Texas A&M,Saint Mary's,Saint Mary's,Saint Mary's,Saint Mary's,Texas A&M,Saint Mary's,Texas A&M,Saint Mary's
+R64,1,South,Houston,Idaho,,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston
+R64,1,Midwest,Michigan,Howard,,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
+R64,1,Midwest,Georgia,Saint Louis,,Saint Louis,Saint Louis,Georgia,Georgia,Saint Louis,Saint Louis,Georgia,Georgia,Saint Louis,Georgia,Georgia,Saint Louis,Saint Louis,Saint Louis,Saint Louis,Georgia
+R64,1,Midwest,Texas Tech,Akron,,Texas Tech,Akron,Texas Tech,Texas Tech,Akron,Texas Tech,Akron,Akron,Texas Tech,Akron,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech
+R64,1,Midwest,Alabama,Hofstra,,Alabama,Hofstra,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama
+R64,1,Midwest,Tennessee,Miami (Ohio),,Miami (Ohio),Tennessee,Tennessee,Miami (Ohio),Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee
+R64,1,Midwest,Virginia,Wright St,,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia
+R64,1,Midwest,Kentucky,Santa Clara,,Kentucky,Santa Clara,Santa Clara,Santa Clara,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Santa Clara,Santa Clara,Kentucky,Kentucky
+R64,1,Midwest,Iowa St,Tennessee St,,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
 2nd Round,2,,,,,,,,,,,,,,,,,,,,
 R32,2,East,,,,,,,,,,,,,,,,,,,
 R32,2,East,,,,,,,,,,,,,,,,,,,
