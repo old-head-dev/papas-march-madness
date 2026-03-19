@@ -1,0 +1,9 @@
+{
+  "name": "Papa's March Madness 2026",
+  "short_name": "Papa's MM",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#060a14",
+  "theme_color": "#060a14",
+  "description": "Family bracket pool dashboard"
+}
