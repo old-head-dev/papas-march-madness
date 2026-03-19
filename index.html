@@ -1094,6 +1094,16 @@ function calculateMovement(games, participants) {
 /* ═══════════════════════════════════════════════════════
    ROUND MVP & COLD
    ═══════════════════════════════════════════════════════ */
+function getRoundScores(rGames, activePickers) {
+  const scores = {};
+  for (const p of activePickers) {
+    let s = 0;
+    for (const g of rGames) { if (g.picks[p]?.toLowerCase() === g.winner.toLowerCase()) s += g.points; }
+    scores[p] = s;
+  }
+  return scores;
+}
+
 function getRoundMVPs(games, participants) {
   const mvps = {};
   for (const round of ROUND_ORDER) {
@@ -1101,19 +1111,12 @@ function getRoundMVPs(games, participants) {
     if (rGames.length === 0) continue;
     const activePickers = participants.filter(p => rGames.some(g => g.picks[p]));
     if (activePickers.length === 0) continue;
-    let maxScore = -1;
-    for (const p of activePickers) {
-      let s = 0;
-      for (const g of rGames) { if (g.picks[p]?.toLowerCase() === g.winner.toLowerCase()) s += g.points; }
-      if (s > maxScore) maxScore = s;
-    }
-    const winners = activePickers.filter(p => {
-      let s = 0;
-      for (const g of rGames) { if (g.picks[p]?.toLowerCase() === g.winner.toLowerCase()) s += g.points; }
-      return s === maxScore;
-    });
-    // Only award MVP if not everyone has the same score
-    if (winners.length < activePickers.length) mvps[round] = { names: winners, score: maxScore };
+    const scores = getRoundScores(rGames, activePickers);
+    const distinctScores = new Set(Object.values(scores));
+    if (distinctScores.size < 3) continue; // Need 3+ distinct scores for MVP/cold
+    const maxScore = Math.max(...Object.values(scores));
+    const winners = activePickers.filter(p => scores[p] === maxScore);
+    mvps[round] = { names: winners, score: maxScore };
   }
   return mvps;
 }
@@ -1123,22 +1126,13 @@ function getRoundColds(games, participants) {
   for (const round of ROUND_ORDER) {
     const rGames = games.filter(g => g.round === round && g.winner);
     if (rGames.length === 0) continue;
-    // Only consider participants who submitted at least one pick in this round
     const activePickers = participants.filter(p => rGames.some(g => g.picks[p]));
     if (activePickers.length === 0) continue;
-    let minScore = Infinity;
-    for (const p of activePickers) {
-      let s = 0;
-      for (const g of rGames) { if (g.picks[p]?.toLowerCase() === g.winner.toLowerCase()) s += g.points; }
-      if (s < minScore) minScore = s;
-    }
-    const losers = activePickers.filter(p => {
-      let s = 0;
-      for (const g of rGames) { if (g.picks[p]?.toLowerCase() === g.winner.toLowerCase()) s += g.points; }
-      return s === minScore;
-    });
-    // Only show cold badge if not everyone has the same score
-    if (losers.length < activePickers.length) colds[round] = { names: losers, score: minScore };
+    const scores = getRoundScores(rGames, activePickers);
+    const distinctScores = new Set(Object.values(scores));
+    if (distinctScores.size < 3) continue; // Need 3+ distinct scores for MVP/cold
+    const minScore = Math.min(...Object.values(scores));
+    const losers = activePickers.filter(p => scores[p] === minScore);
   }
   return colds;
 }
