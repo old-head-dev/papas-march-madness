@@ -5,17 +5,20 @@ Family bracket pool dashboard for 16 participants, hosted on GitHub Pages.
 ## Architecture
 
 - **Single-file dashboard**: `index.html` — static HTML/CSS/JS, no build step
-- **Data source**: `bracket.csv` — fetched client-side from GitHub raw URL
-- **Hosting**: GitHub Pages (legacy mode) at https://old-head-dev.github.io/papas-march-madness/
+- **Data source**: `bracket.csv` — fetched client-side via relative path (same GitHub Pages origin)
+- **Hosting**: GitHub Pages at https://old-head-dev.github.io/papas-march-madness/
 - **Repo**: https://github.com/old-head-dev/papas-march-madness (public)
-- Every `git push` to `main` auto-deploys the dashboard
+- Every `git push` to `main` auto-deploys (CDN propagation takes 1-5 minutes)
+- **Web app manifest**: `manifest.json` — supports Add to Home Screen on iOS
+- **Auto-refresh**: visibility change, pageshow, and focus listeners re-fetch data when app returns to foreground
 
 ## bracket.csv Structure
 
 ```
-Round,Points,Region,Team1,Team2,Actual_Winner,Papa,Jon,...,Doug
+Round,Points,Region,Team1,Team2,Actual_Winner,Papa,Jon,Drew,Aubrey,Miles,Mariah,Jada,Katy,Lisa,Aaron,Mason,Journey,Sara,Paige,Korbin,Doug
 ```
 
+- **22 columns total** — column indices: Round(0), Points(1), Region(2), Team1(3), Team2(4), Actual_Winner(5), Papa(6), Jon(7), Drew(8), Aubrey(9), Miles(10), Mariah(11), Jada(12), Katy(13), Lisa(14), Aaron(15), Mason(16), Journey(17), Sara(18), Paige(19), Korbin(20), Doug(21)
 - **Round header rows**: "1st Round", "2nd Round", etc. — decorative, skip when parsing
 - **Game rows**: Round code (R64/R32/S16/E8/F4/NCG), points, region, team1, team2, actual_winner, then 16 participant pick columns
 - **Scoring**: R64=1pt, R32=2pt, S16=4pt, E8=8pt, F4=16pt, NCG=32pt
@@ -32,6 +35,11 @@ Papa, Jon, Drew, Aubrey, Miles, Mariah, Jada, Katy, Lisa, Aaron, Mason, Journey,
 
 Jon manages the pool from his phone via Claude Code CLI remote sessions. Every command ends with an automatic `git add bracket.csv && git commit && git push` to update the live dashboard.
 
+**Permissions setup for remote sessions** — paste at start of session:
+```
+/allowed-tools Bash(python *) Bash(git add *) Bash(git commit *) Bash(git push *) Bash(git push) Bash(git status *) Bash(git log *) Bash(git diff *)
+```
+
 ### Game Results
 
 When Jon types:
@@ -47,7 +55,8 @@ Claude should:
 1. Read bracket.csv and find the game row where Duke is Team1 or Team2 AND Actual_Winner is blank
 2. Set Actual_Winner to the exact Team1/Team2 value from that row (preserving original casing/spelling)
 3. If the team name is ambiguous (appears in multiple unfinished games), ask Jon to clarify
-4. Commit with message like "Results: Duke, Florida, Arizona win" and push
+4. After setting winner(s), check bracket progression rules below — auto-populate next round matchups if both feeder games are decided
+5. Commit with message like "Results: Duke, Florida, Arizona win" and push
 
 ### Play-In Updates
 
@@ -59,41 +68,31 @@ Play-in winner: Lehigh
 Claude should:
 1. Find the FF: entry in bracket.csv containing that team name
 2. Replace the entire FF:XXX/YYY value in Team2 with the winning team name
-3. Check if any participant picks reference the FF: string and note if updates are needed
+3. Check if any participant picks reference the FF: string and update if needed
 4. Commit and push
 
 ### Entering Picks
 
-Jon will paste whatever he receives — raw text, screenshots, photos of handwritten notes, email forwards. No fixed format or order.
+Jon will paste whatever he receives — raw text, screenshots, photos of handwritten notes, email forwards. No fixed format or order. Picks may arrive in bracket order, by region, or completely random.
 
 Claude should:
 1. Extract team names from the input (any format, any order, possibly abbreviated or misspelled)
 2. Fuzzy-match each team name to the official Team1/Team2 values in bracket.csv for the current round
 3. Determine which game each pick belongs to based on team name matching (NOT position/order in the list)
 4. Fill the correct participant's column for each matching game row
-5. Show Jon the parsed picks in a clear format for confirmation BEFORE committing
-6. After Jon confirms, commit with message like "Add Papa R64 picks" and push
+5. Show Jon the parsed picks in a clear table format for confirmation BEFORE committing
+6. If ALL picks are confident matches with no questions, confirm and proceed
+7. If any team name is too fuzzy to be 100% certain, explicitly call it out and ask Jon to clarify
+8. After Jon confirms, commit with message like "Add Papa R64 picks" and push
 
-**Common abbreviations to handle**: "Mich St" → "Michigan St", "UNC" → "N. Carolina", "SJU" → "St. John's", "Nova" → "Villanova", "UVA" → "Virginia", "UK" → "Kentucky", "Bama" → "Alabama", "OSU" → "Ohio St", etc.
+**Common abbreviations to handle**: "Mich St"/"MSU" → "Michigan St", "UNC" → "N. Carolina", "SJU"/"St Johns" → "St. John's", "Nova"/"Villa" → "Villanova", "UVA"/"VA" → "Virginia", "UK"/"KY" → "Kentucky", "Bama"/"AL" → "Alabama", "OSU"/"OHST"/"Ohio State" → "Ohio St", "USF" → "South Florida", "Zags"/"Gonz" → "Gonzaga", "Vandy" → "Vanderbilt", "KU" → "Kansas", "FL" → "Florida", "IL" → "Illinois", "AZ" → "Arizona", "TN" → "Tennessee", "PU" → "Purdue", "MI" → "Michigan", "St Marys" → "Saint Mary's", "Texas AM" → "Texas A&M"
 
-**Confirmation protocol**: After parsing picks, ALWAYS show Jon the full parsed table for confirmation before writing to CSV. If any team name is too fuzzy to be 100% certain, explicitly call it out and ask Jon to clarify. Zero tolerance for mistakes — every pick must be verified correct.
-
-### Strip Dummy Data
-
-When Jon types:
-```
-Strip dummy data
-```
-
-Claude should:
-1. Clear ALL Actual_Winner values and ALL participant pick values from bracket.csv
-2. Keep the bracket structure intact (Round, Points, Region, Team1, Team2 columns preserved)
-3. Commit with message "Strip dummy data for go-live" and push
+**Confirmation protocol**: Zero tolerance for mistakes. Every pick must be verified correct. Flag upset picks (lower seed over higher seed) in the confirmation table. Note all fuzzy matches made.
 
 ## Picks Per Round (Round-by-Round Format)
 
 Participants do NOT fill out the full bracket upfront. They pick one round at a time:
-- R64 picks → before Thursday R64 games
+- R64 picks → before Thursday R64 games (March 19-20)
 - R32 picks → Saturday morning before R32 games
 - S16 picks → before Sweet 16 games
 - E8 picks → before Elite 8 games
@@ -137,20 +136,30 @@ When Claude enters a game result (Actual_Winner):
 5. Use Python csv module for all writes
 6. Commit and push
 
-## Play-In / First Four Games
+## First Four / Play-In Games (All Resolved)
 
-Some bracket slots start as "FF:XXX/YYY" format. Once the play-in game is decided:
-1. Replace the FF entry in Team2 with the winning team name
-2. Update any participant picks that referenced the FF entry
-3. The seed is inherited from the bracket position (e.g., always 16-seed or 11-seed)
+- **West 11-seed**: Texas → plays (6) BYU
+- **Midwest 16-seed**: Howard → plays (1) Michigan
+- **South 16-seed**: Prairie View A&M → Prairie View → plays (1) Florida
+- **Midwest 11-seed**: Miami (Ohio) → plays (6) Tennessee
 
-### Remaining First Four (as of March 18, 2026)
-- **South 16-seed**: Prairie View A&M vs Lehigh → winner plays (1) Florida
-- **Midwest 11-seed**: Miami (Ohio) vs SMU → winner plays (6) Tennessee
+## Current Status (as of March 19, 2026)
 
-### Resolved First Four
-- **West 11-seed**: Texas (replaced FF:TX/NCSt) → plays (6) BYU
-- **Midwest 16-seed**: Howard (replaced FF:HOW/UMBC) → plays (1) Michigan
+- All 16 participants have R64 picks entered
+- All 4 First Four play-in games resolved
+- Tournament starts March 19 (today)
+- Dashboard live at https://old-head-dev.github.io/papas-march-madness/
+- **TEST DATA**: TCU, Duke, and Louisville currently set as test winners in bracket.csv — REVERT before real games
+
+## Dashboard Features
+
+- **Leaderboard**: Sortable standings table with podium, round-by-round scores, MVP/cold badges (require 3+ distinct scores), rank movement arrows
+- **Picks**: Pick consensus heatmap showing who picked each team
+- **Upsets**: Called It (green), Missed It (red), No One Saw It Coming (yellow)
+- **Lone Wolf**: Unique picks no one else made — HIT (green), MISS (red), TBD (gray)
+- **Head-to-Head**: Compare any two participants pick-by-pick
+- **Awards**: Most upsets called, most upsets missed, highest/lowest round score, chalkiest picker, boldest picker, consensus crusher, playing it safe
+- **History**: Past tournament results (2024, 2025 winners)
 
 ## Jon's Google Sheet
 
