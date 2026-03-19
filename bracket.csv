@@ -18,7 +18,7 @@ R64,1,West,Miami FL,Missouri,,Missouri,Miami FL,Miami FL,Missouri,Missouri,Misso
 R64,1,West,Purdue,Queens,,Purdue,Purdue,Purdue,Queens,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
 R64,1,South,Florida,Prairie View,,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida
 R64,1,South,Clemson,Iowa,,Iowa,Iowa,Iowa,Clemson,Iowa,Iowa,Iowa,Iowa,Iowa,Clemson,Clemson,Iowa,Iowa,Iowa,Iowa,Clemson
-R64,1,South,Vanderbilt,McNeese,,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt
+R64,1,South,Vanderbilt,McNeese,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt
 R64,1,South,Nebraska,Troy,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska
 R64,1,South,N. Carolina,VCU,,VCU,VCU,VCU,N. Carolina,VCU,N. Carolina,N. Carolina,N. Carolina,N. Carolina,VCU,N. Carolina,VCU,VCU,N. Carolina,N. Carolina,N. Carolina
 R64,1,South,Illinois,Penn,,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
@@ -42,7 +42,7 @@ R32,2,West,,,,,,,,,,,,,,,,,,,
 R32,2,West,,,,,,,,,,,,,,,,,,,
 R32,2,West,,,,,,,,,,,,,,,,,,,
 R32,2,South,,,,,,,,,,,,,,,,,,,
-R32,2,South,,,,,,,,,,,,,,,,,,,
+R32,2,South,Nebraska,Vanderbilt,,,,,,,,,,,,,,,,,
 R32,2,South,,,,,,,,,,,,,,,,,,,
 R32,2,South,,,,,,,,,,,,,,,,,,,
 R32,2,Midwest,,,,,,,,,,,,,,,,,,,
