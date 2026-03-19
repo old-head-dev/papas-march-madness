@@ -1133,6 +1133,7 @@ function getRoundColds(games, participants) {
     if (distinctScores.size < 3) continue; // Need 3+ distinct scores for MVP/cold
     const minScore = Math.min(...Object.values(scores));
     const losers = activePickers.filter(p => scores[p] === minScore);
+    colds[round] = { names: losers, score: minScore };
   }
   return colds;
 }
