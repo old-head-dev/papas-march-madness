@@ -1112,7 +1112,8 @@ function getRoundMVPs(games, participants) {
       for (const g of rGames) { if (g.picks[p]?.toLowerCase() === g.winner.toLowerCase()) s += g.points; }
       return s === maxScore;
     });
-    mvps[round] = { names: winners, score: maxScore };
+    // Only award MVP if not everyone has the same score
+    if (winners.length < activePickers.length) mvps[round] = { names: winners, score: maxScore };
   }
   return mvps;
 }
@@ -1136,7 +1137,8 @@ function getRoundColds(games, participants) {
       for (const g of rGames) { if (g.picks[p]?.toLowerCase() === g.winner.toLowerCase()) s += g.points; }
       return s === minScore;
     });
-    colds[round] = { names: losers, score: minScore };
+    // Only show cold badge if not everyone has the same score
+    if (losers.length < activePickers.length) colds[round] = { names: losers, score: minScore };
   }
   return colds;
 }
