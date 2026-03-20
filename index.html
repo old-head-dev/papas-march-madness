@@ -1160,6 +1160,32 @@ function findUpsets(games, seedMap, participants) {
   return upsets;
 }
 
+// Find picks where someone predicted an upset but the favorite won
+function findMissedUpsetPicks(games, seedMap, participants) {
+  const missed = [];
+  for (const g of games) {
+    if (!g.winner || !g.team1 || !g.team2) continue;
+    const s1 = getSeed(g.team1, seedMap);
+    const s2 = getSeed(g.team2, seedMap);
+    if (s1 === '?' || s2 === '?') continue;
+    if ((s1 === 8 && s2 === 9) || (s1 === 9 && s2 === 8)) continue;
+    const wIsTeam1 = g.winner.toLowerCase() === g.team1.toLowerCase();
+    const winSeed = wIsTeam1 ? s1 : s2;
+    const loseSeed = wIsTeam1 ? s2 : s1;
+    // Favorite won (lower seed number = higher seed = favorite)
+    if (winSeed < loseSeed) {
+      // Find participants who picked the underdog (loser)
+      const loser = wIsTeam1 ? g.team2 : g.team1;
+      const loserSeed = loseSeed;
+      const missers = participants.filter(p => g.picks[p]?.toLowerCase() === loser.toLowerCase());
+      if (missers.length > 0) {
+        missed.push({ favorite: g.winner, underdog: loser, favSeed: winSeed, underdogSeed: loserSeed, missers, round: g.round, region: g.region });
+      }
+    }
+  }
+  return missed;
+}
+
 /* ═══════════════════════════════════════════════════════
    LONE WOLVES
    ═══════════════════════════════════════════════════════ */
@@ -1203,18 +1229,12 @@ function calculateAwards(games, participants, seedMap, scores) {
     awards.push({ icon: '&#127942;', title: 'Most Upsets Called', winner: winners.join(', '), stat: `${max} upset${max !== 1 ? 's' : ''} predicted` });
   }
 
-  // Most Upsets Missed
-  if (upsets.length > 0) {
+  // Most Upsets Missed (picked an upset that didn't happen)
+  const missedUpsetPicks = findMissedUpsetPicks(games, seedMap, participants);
+  if (missedUpsetPicks.length > 0) {
     const counts = {};
     participants.forEach(p => counts[p] = 0);
-    upsets.forEach(u => {
-      participants.forEach(p => {
-        if (u.callers.indexOf(p) === -1) {
-          const g = games.find(g2 => g2.winner?.toLowerCase() === u.winner.toLowerCase() && g2.round === u.round && g2.region === u.region);
-          if (g && g.picks[p]) counts[p]++;
-        }
-      });
-    });
+    missedUpsetPicks.forEach(u => u.missers.forEach(p => counts[p]++));
     const max = Math.max(...Object.values(counts));
     const winners = participants.filter(p => counts[p] === max);
     awards.push({ icon: '&#128561;', title: 'Most Upsets Missed', winner: winners.join(', '), stat: `${max} upset${max !== 1 ? 's' : ''} missed` });
@@ -1529,20 +1549,13 @@ function renderConsensus() {
 // ── UPSETS ───────────────────────────────────────────
 function renderUpsets() {
   const upsets = findUpsets(state.games, state.seedMap, state.participants);
-  if (upsets.length === 0) {
+  const missedUpsetPicks = findMissedUpsetPicks(state.games, state.seedMap, state.participants);
+  if (upsets.length === 0 && missedUpsetPicks.length === 0) {
     document.getElementById('upsets').innerHTML = '<div class="empty-state"><span class="icon">&#128064;</span>No upsets yet — stay tuned!</div>';
     return;
   }
   const calledUpsets = upsets.filter(u => u.callers.length > 0);
   const noOneUpsets = upsets.filter(u => u.callers.length === 0);
-  // For "Missed It": upsets where ≥1 person called it, show who DIDN'T (picked the favorite)
-  const missedData = calledUpsets.map(u => {
-    const missers = state.participants.filter(p => {
-      const g = state.games.find(g2 => g2.winner && g2.winner.toLowerCase() === u.winner.toLowerCase() && g2.round === u.round && g2.region === u.region);
-      return g && g.picks[p] && g.picks[p].toLowerCase() !== u.winner.toLowerCase();
-    });
-    return { ...u, missers };
-  }).filter(u => u.missers.length > 0);
   let html = '';
   if (calledUpsets.length > 0) {
     html += '<div class="section-title" style="color:var(--correct)">Called It</div>';
@@ -1555,15 +1568,15 @@ function renderUpsets() {
         <div class="upset-callers">Called it: <strong>${u.callers.map(esc).join(', ')}</strong></div>
       </div>`).join('');
   }
-  if (missedData.length > 0) {
+  if (missedUpsetPicks.length > 0) {
     html += '<div class="section-title" style="color:var(--wrong);margin-top:24px">Missed It</div>';
-    html += missedData.map(u => `
+    html += missedUpsetPicks.map(u => `
       <div class="upset-card animate-in">
         <div class="upset-header">
-          <span class="upset-result">(${u.winSeed}) ${esc(u.winner)} over (${u.loseSeed}) ${esc(u.loser)}</span>
+          <span class="upset-result">(${u.underdogSeed}) ${esc(u.underdog)} over (${u.favSeed}) ${esc(u.favorite)}</span>
           <span class="upset-round-label">${ROUND_FULL[u.round] || u.round} &bull; ${esc(u.region)}</span>
         </div>
-        <div class="upset-callers">Missed by: <strong style="color:var(--wrong)">${u.missers.map(esc).join(', ')}</strong></div>
+        <div class="upset-callers">Predicted by: <strong style="color:var(--wrong)">${u.missers.map(esc).join(', ')}</strong></div>
       </div>`).join('');
   }
   if (noOneUpsets.length > 0) {
