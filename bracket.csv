@@ -21,7 +21,7 @@ R64,1,South,Clemson,Iowa,,Iowa,Iowa,Iowa,Clemson,Iowa,Iowa,Iowa,Iowa,Iowa,Clemso
 R64,1,South,Vanderbilt,McNeese,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,McNeese,Vanderbilt
 R64,1,South,Nebraska,Troy,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska,Nebraska
 R64,1,South,N. Carolina,VCU,VCU,VCU,VCU,VCU,N. Carolina,VCU,N. Carolina,N. Carolina,N. Carolina,N. Carolina,VCU,N. Carolina,VCU,VCU,N. Carolina,N. Carolina,N. Carolina
-R64,1,South,Illinois,Penn,,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
+R64,1,South,Illinois,Penn,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
 R64,1,South,Saint Mary's,Texas A&M,Texas A&M,Saint Mary's,Saint Mary's,Saint Mary's,Texas A&M,Saint Mary's,Saint Mary's,Texas A&M,Texas A&M,Saint Mary's,Saint Mary's,Saint Mary's,Saint Mary's,Texas A&M,Saint Mary's,Texas A&M,Saint Mary's
 R64,1,South,Houston,Idaho,,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston
 R64,1,Midwest,Michigan,Howard,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
@@ -43,7 +43,7 @@ R32,2,West,,,,,,,,,,,,,,,,,,,
 R32,2,West,,,,,,,,,,,,,,,,,,,
 R32,2,South,,,,,,,,,,,,,,,,,,,
 R32,2,South,Nebraska,Vanderbilt,,,,,,,,,,,,,,,,,
-R32,2,South,,,,,,,,,,,,,,,,,,,
+R32,2,South,VCU,Illinois,,,,,,,,,,,,,,,,,
 R32,2,South,,,,,,,,,,,,,,,,,,,
 R32,2,Midwest,,,,,,,,,,,,,,,,,,,
 R32,2,Midwest,,,,,,,,,,,,,,,,,,,
