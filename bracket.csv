@@ -27,11 +27,11 @@ R64,1,South,Houston,Idaho,Houston,Houston,Houston,Houston,Houston,Houston,Housto
 R64,1,Midwest,Michigan,Howard,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
 R64,1,Midwest,Georgia,Saint Louis,Saint Louis,Saint Louis,Saint Louis,Georgia,Georgia,Saint Louis,Saint Louis,Georgia,Georgia,Saint Louis,Georgia,Georgia,Saint Louis,Saint Louis,Saint Louis,Saint Louis,Georgia
 R64,1,Midwest,Texas Tech,Akron,Texas Tech,Texas Tech,Akron,Texas Tech,Texas Tech,Akron,Texas Tech,Akron,Akron,Texas Tech,Akron,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech
-R64,1,Midwest,Alabama,Hofstra,,Alabama,Hofstra,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama
+R64,1,Midwest,Alabama,Hofstra,Alabama,Alabama,Hofstra,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama
 R64,1,Midwest,Tennessee,Miami (Ohio),,Miami (Ohio),Tennessee,Tennessee,Miami (Ohio),Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee
 R64,1,Midwest,Virginia,Wright St,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia,Virginia
 R64,1,Midwest,Kentucky,Santa Clara,Kentucky,Kentucky,Santa Clara,Santa Clara,Santa Clara,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Kentucky,Santa Clara,Santa Clara,Kentucky,Kentucky
-R64,1,Midwest,Iowa St,Tennessee St,,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
+R64,1,Midwest,Iowa St,Tennessee St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
 2nd Round,2,,,,,,,,,,,,,,,,,,,,
 R32,2,East,Duke,TCU,,,,,,,,,,,,,,,,,
 R32,2,East,,,,,,,,,,,,,,,,,,,
@@ -47,8 +47,8 @@ R32,2,South,VCU,Illinois,,,,,,,,,,,,,,,,,
 R32,2,South,Texas A&M,Houston,,,,,,,,,,,,,,,,,
 R32,2,Midwest,Michigan,Saint Louis,,,,,,,,,,,,,,,,,
 R32,2,Midwest,,,,,,,,,,,,,,,,,,,
-R32,2,Midwest,,,,,,,,,,,,,,,,,,,
-R32,2,Midwest,,,,,,,,,,,,,,,,,,,
+R32,2,Midwest,Alabama,Virginia,,,,,,,,,,,,,,,,,
+R32,2,Midwest,Kentucky,Iowa St,,,,,,,,,,,,,,,,,
 Sweet 16,4,,,,,,,,,,,,,,,,,,,,
 S16,4,East,,,,,,,,,,,,,,,,,,,
 S16,4,East,,,,,,,,,,,,,,,,,,,
