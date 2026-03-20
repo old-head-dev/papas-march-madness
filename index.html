@@ -1148,7 +1148,7 @@ function findUpsets(games, seedMap, participants) {
     const s1 = getSeed(g.team1, seedMap);
     const s2 = getSeed(g.team2, seedMap);
     if (s1 === '?' || s2 === '?') continue;
-    if ((s1 === 8 && s2 === 9) || (s1 === 9 && s2 === 8)) continue;
+    if (g.round === 'R64' && ((s1 === 8 && s2 === 9) || (s1 === 9 && s2 === 8))) continue;
     const wIsTeam1 = g.winner.toLowerCase() === g.team1.toLowerCase();
     const winSeed = wIsTeam1 ? s1 : s2;
     const loseSeed = wIsTeam1 ? s2 : s1;
@@ -1168,7 +1168,7 @@ function findMissedUpsetPicks(games, seedMap, participants) {
     const s1 = getSeed(g.team1, seedMap);
     const s2 = getSeed(g.team2, seedMap);
     if (s1 === '?' || s2 === '?') continue;
-    if ((s1 === 8 && s2 === 9) || (s1 === 9 && s2 === 8)) continue;
+    if (g.round === 'R64' && ((s1 === 8 && s2 === 9) || (s1 === 9 && s2 === 8))) continue;
     const wIsTeam1 = g.winner.toLowerCase() === g.team1.toLowerCase();
     const winSeed = wIsTeam1 ? s1 : s2;
     const loseSeed = wIsTeam1 ? s2 : s1;
