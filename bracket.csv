@@ -3,7 +3,7 @@ Round,Points,Region,Team1,Team2,Actual_Winner,Papa,Jon,Drew,Aubrey,Miles,Mariah,
 R64,1,East,Duke,Siena,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke
 R64,1,East,Ohio St,TCU,TCU,Ohio St,Ohio St,Ohio St,TCU,Ohio St,Ohio St,Ohio St,Ohio St,Ohio St,TCU,Ohio St,Ohio St,TCU,TCU,TCU,TCU
 R64,1,East,St. John's,N. Iowa,St. John's,St. John's,St. John's,St. John's,St. John's,N. Iowa,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's
-R64,1,East,Kansas,Cal Baptist,,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas
+R64,1,East,Kansas,Cal Baptist,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas,Kansas
 R64,1,East,Louisville,South Florida,Louisville,Louisville,South Florida,South Florida,South Florida,South Florida,South Florida,Louisville,Louisville,Louisville,South Florida,Louisville,South Florida,Louisville,South Florida,South Florida,Louisville
 R64,1,East,Michigan St,N. Dakota St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St
 R64,1,East,UCLA,UCF,UCLA,UCLA,UCLA,UCF,UCF,UCF,UCLA,UCLA,UCF,UCLA,UCF,UCLA,UCLA,UCLA,UCLA,UCLA,UCLA
@@ -14,7 +14,7 @@ R64,1,West,Wisconsin,High Point,High Point,Wisconsin,Wisconsin,Wisconsin,Wiscons
 R64,1,West,Arkansas,Hawaii,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas
 R64,1,West,BYU,Texas,Texas,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU,BYU
 R64,1,West,Gonzaga,Kennesaw St,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga
-R64,1,West,Miami FL,Missouri,,Missouri,Miami FL,Miami FL,Missouri,Missouri,Missouri,Missouri,Missouri,Miami FL,Missouri,Miami FL,Miami FL,Miami FL,Miami FL,Missouri,Miami FL
+R64,1,West,Miami FL,Missouri,Miami FL,Missouri,Miami FL,Miami FL,Missouri,Missouri,Missouri,Missouri,Missouri,Miami FL,Missouri,Miami FL,Miami FL,Miami FL,Miami FL,Missouri,Miami FL
 R64,1,West,Purdue,Queens,Purdue,Purdue,Purdue,Purdue,Queens,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
 R64,1,South,Florida,Prairie View,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida
 R64,1,South,Clemson,Iowa,Iowa,Iowa,Iowa,Iowa,Clemson,Iowa,Iowa,Iowa,Iowa,Iowa,Clemson,Clemson,Iowa,Iowa,Iowa,Iowa,Clemson
@@ -34,13 +34,13 @@ R64,1,Midwest,Kentucky,Santa Clara,Kentucky,Kentucky,Santa Clara,Santa Clara,San
 R64,1,Midwest,Iowa St,Tennessee St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
 2nd Round,2,,,,,,,,,,,,,,,,,,,,
 R32,2,East,Duke,TCU,,,,,,,,,,,,,,,,,
-R32,2,East,,,,,,,,,,,,,,,,,,,
+R32,2,East,St. John's,Kansas,,,,,,,,,,,,,,,,,
 R32,2,East,Louisville,Michigan St,,,,,,,,,,,,,,,,,
 R32,2,East,,,,,,,,,,,,,,,,,,,
 R32,2,West,Arizona,Utah St,,,,,,,,,,,,,,,,,
 R32,2,West,High Point,Arkansas,,,,,,,,,,,,,,,,,
 R32,2,West,Texas,Gonzaga,,,,,,,,,,,,,,,,,
-R32,2,West,,,,,,,,,,,,,,,,,,,
+R32,2,West,Miami FL,Purdue,,,,,,,,,,,,,,,,,
 R32,2,South,Florida,Iowa,,,,,,,,,,,,,,,,,
 R32,2,South,Vanderbilt,Nebraska,,,,,,,,,,,,,,,,,
 R32,2,South,VCU,Illinois,,,,,,,,,,,,,,,,,
