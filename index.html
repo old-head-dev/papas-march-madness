@@ -1267,13 +1267,13 @@ function calculateAwards(games, participants, seedMap, scores) {
     awards.push({ icon: '&#129398;', title: 'Lowest Round Score', winner: worstTies.join(', '), stat: `${worst.score} pts in ${ROUND_FULL[worst.round] || worst.round}` });
   }
 
-  // Chalkiest Picker (highest % higher-seed picks in R64)
-  const r64Games = games.filter(g => g.round === 'R64' && g.team1 && g.team2);
-  if (r64Games.length > 0) {
+  // Chalkiest Picker (highest % higher-seed picks across all rounds)
+  const allPickGames = games.filter(g => g.team1 && g.team2);
+  if (allPickGames.length > 0) {
     const chalkPcts = {};
     participants.forEach(p => {
       let chalk = 0, total = 0;
-      r64Games.forEach(g => {
+      allPickGames.forEach(g => {
         if (!g.picks[p]) return;
         total++;
         const s1 = getSeed(g.team1, seedMap);
@@ -1289,12 +1289,12 @@ function calculateAwards(games, participants, seedMap, scores) {
     awards.push({ icon: '&#128218;', title: 'Chalkiest Picker', winner: winners.join(', '), stat: `${Math.round(max * 100)}% favorites picked` });
   }
 
-  // Boldest Picker (highest % lower-seed picks in R64)
-  if (r64Games.length > 0) {
+  // Boldest Picker (highest % lower-seed picks across all rounds)
+  if (allPickGames.length > 0) {
     const boldPcts = {};
     participants.forEach(p => {
       let bold = 0, total = 0;
-      r64Games.forEach(g => {
+      allPickGames.forEach(g => {
         if (!g.picks[p]) return;
         total++;
         const s1 = getSeed(g.team1, seedMap);
