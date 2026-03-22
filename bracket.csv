@@ -43,7 +43,7 @@ R32,2,West,Texas,Gonzaga,Texas,Gonzaga,Gonzaga,Gonzaga,Texas,Gonzaga,Gonzaga,Gon
 R32,2,West,Miami FL,Purdue,,Purdue,Purdue,Miami FL,Miami FL,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
 R32,2,South,Florida,Iowa,,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida
 R32,2,South,Vanderbilt,Nebraska,,Vanderbilt,Vanderbilt,Vanderbilt,Nebraska,Vanderbilt,Nebraska,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Nebraska,Vanderbilt,Vanderbilt,Nebraska,Nebraska,Nebraska
-R32,2,South,VCU,Illinois,,Illinois,Illinois,VCU,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
+R32,2,South,VCU,Illinois,Illinois,Illinois,Illinois,VCU,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
 R32,2,South,Texas A&M,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston
 R32,2,Midwest,Michigan,Saint Louis,Michigan,Michigan,Michigan,Michigan,Michigan,Saint Louis,Michigan,Michigan,Michigan,Saint Louis,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
 R32,2,Midwest,Texas Tech,Alabama,,Alabama,Texas Tech,Texas Tech,Texas Tech,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech
@@ -55,7 +55,7 @@ S16,4,East,,,,,,,,,,,,,,,,,,,
 S16,4,West,,,,,,,,,,,,,,,,,,,
 S16,4,West,,,,,,,,,,,,,,,,,,,
 S16,4,South,,,,,,,,,,,,,,,,,,,
-S16,4,South,,,,,,,,,,,,,,,,,,,
+S16,4,South,Illinois,Houston,,,,,,,,,,,,,,,,,
 S16,4,Midwest,,,,,,,,,,,,,,,,,,,
 S16,4,Midwest,,,,,,,,,,,,,,,,,,,
 Elite 8,8,,,,,,,,,,,,,,,,,,,,
