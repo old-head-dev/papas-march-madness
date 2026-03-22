@@ -40,7 +40,7 @@ R32,2,East,UCLA,UConn,,UConn,UConn,UConn,UConn,UCLA,UConn,UCLA,UConn,UConn,UConn
 R32,2,West,Arizona,Utah St,,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona
 R32,2,West,High Point,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,High Point,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas
 R32,2,West,Texas,Gonzaga,Texas,Gonzaga,Gonzaga,Gonzaga,Texas,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga
-R32,2,West,Miami FL,Purdue,,Purdue,Purdue,Miami FL,Miami FL,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
+R32,2,West,Miami FL,Purdue,Purdue,Purdue,Purdue,Miami FL,Miami FL,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
 R32,2,South,Florida,Iowa,,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida,Florida
 R32,2,South,Vanderbilt,Nebraska,Nebraska,Vanderbilt,Vanderbilt,Vanderbilt,Nebraska,Vanderbilt,Nebraska,Vanderbilt,Vanderbilt,Vanderbilt,Vanderbilt,Nebraska,Vanderbilt,Vanderbilt,Nebraska,Nebraska,Nebraska
 R32,2,South,VCU,Illinois,Illinois,Illinois,Illinois,VCU,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois,Illinois
@@ -53,7 +53,7 @@ Sweet 16,4,,,,,,,,,,,,,,,,,,,,
 S16,4,East,,,,,,,,,,,,,,,,,,,
 S16,4,East,,,,,,,,,,,,,,,,,,,
 S16,4,West,,,,,,,,,,,,,,,,,,,
-S16,4,West,,,,,,,,,,,,,,,,,,,
+S16,4,West,Texas,Purdue,,,,,,,,,,,,,,,,,
 S16,4,South,,,,,,,,,,,,,,,,,,,
 S16,4,South,Illinois,Houston,,,,,,,,,,,,,,,,,
 S16,4,Midwest,,,,,,,,,,,,,,,,,,,
