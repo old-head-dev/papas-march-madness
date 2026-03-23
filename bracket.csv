@@ -37,7 +37,7 @@ R32,2,East,Duke,TCU,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,
 R32,2,East,St. John's,Kansas,St. John's,St. John's,St. John's,St. John's,St. John's,St. John's,Kansas,St. John's,St. John's,Kansas,St. John's,St. John's,Kansas,St. John's,Kansas,St. John's,St. John's
 R32,2,East,Louisville,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St
 R32,2,East,UCLA,UConn,,UConn,UConn,UConn,UConn,UCLA,UConn,UCLA,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn,UConn
-R32,2,West,Arizona,Utah St,,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona
+R32,2,West,Arizona,Utah St,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona
 R32,2,West,High Point,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,High Point,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas,Arkansas
 R32,2,West,Texas,Gonzaga,Texas,Gonzaga,Gonzaga,Gonzaga,Texas,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga,Gonzaga
 R32,2,West,Miami FL,Purdue,Purdue,Purdue,Purdue,Miami FL,Miami FL,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
@@ -52,7 +52,7 @@ R32,2,Midwest,Kentucky,Iowa St,Iowa St,Iowa St,Iowa St,Kentucky,Iowa St,Iowa St,
 Sweet 16,4,,,,,,,,,,,,,,,,,,,,
 S16,4,East,Duke,St. John's,,,,,,,,,,,,,,,,,
 S16,4,East,,,,,,,,,,,,,,,,,,,
-S16,4,West,,,,,,,,,,,,,,,,,,,
+S16,4,West,Arizona,Arkansas,,,,,,,,,,,,,,,,,
 S16,4,West,Texas,Purdue,,,,,,,,,,,,,,,,,
 S16,4,South,Iowa,Nebraska,,,,,,,,,,,,,,,,,
 S16,4,South,Illinois,Houston,,,,,,,,,,,,,,,,,
