@@ -47,7 +47,7 @@ R32,2,South,VCU,Illinois,Illinois,Illinois,Illinois,VCU,Illinois,Illinois,Illino
 R32,2,South,Texas A&M,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston,Houston
 R32,2,Midwest,Michigan,Saint Louis,Michigan,Michigan,Michigan,Michigan,Michigan,Saint Louis,Michigan,Michigan,Michigan,Saint Louis,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
 R32,2,Midwest,Texas Tech,Alabama,,Alabama,Texas Tech,Texas Tech,Texas Tech,Alabama,Alabama,Alabama,Alabama,Alabama,Alabama,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech,Texas Tech
-R32,2,Midwest,Tennessee,Virginia,,Tennessee,Virginia,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Virginia,Virginia,Virginia,Virginia,Tennessee,Virginia,Tennessee,Tennessee
+R32,2,Midwest,Tennessee,Virginia,Tennessee,Tennessee,Virginia,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Virginia,Virginia,Virginia,Virginia,Tennessee,Virginia,Tennessee,Tennessee
 R32,2,Midwest,Kentucky,Iowa St,Iowa St,Iowa St,Iowa St,Kentucky,Iowa St,Iowa St,Iowa St,Iowa St,Kentucky,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
 Sweet 16,4,,,,,,,,,,,,,,,,,,,,
 S16,4,East,Duke,St. John's,,,,,,,,,,,,,,,,,
@@ -57,7 +57,7 @@ S16,4,West,Texas,Purdue,,,,,,,,,,,,,,,,,
 S16,4,South,,,,,,,,,,,,,,,,,,,
 S16,4,South,Illinois,Houston,,,,,,,,,,,,,,,,,
 S16,4,Midwest,,,,,,,,,,,,,,,,,,,
-S16,4,Midwest,,,,,,,,,,,,,,,,,,,
+S16,4,Midwest,Tennessee,Iowa St,,,,,,,,,,,,,,,,,
 Elite 8,8,,,,,,,,,,,,,,,,,,,,
 E8,8,East,,,,,,,,,,,,,,,,,,,
 E8,8,West,,,,,,,,,,,,,,,,,,,
