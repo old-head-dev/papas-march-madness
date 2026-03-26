@@ -5,5 +5,13 @@
   "display": "standalone",
   "background_color": "#060a14",
   "theme_color": "#060a14",
-  "description": "Family bracket pool dashboard"
+  "description": "Family bracket pool dashboard",
+  "icons": [
+    {
+      "src": "icon.jpg",
+      "type": "image/jpeg",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ]
 }
