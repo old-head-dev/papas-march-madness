@@ -50,14 +50,14 @@ R32,2,Midwest,Texas Tech,Alabama,Alabama,Alabama,Texas Tech,Texas Tech,Texas Tec
 R32,2,Midwest,Tennessee,Virginia,Tennessee,Tennessee,Virginia,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Tennessee,Virginia,Virginia,Virginia,Virginia,Tennessee,Virginia,Tennessee,Tennessee
 R32,2,Midwest,Kentucky,Iowa St,Iowa St,Iowa St,Iowa St,Kentucky,Iowa St,Iowa St,Iowa St,Iowa St,Kentucky,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
 Sweet 16,4,,,,,,,,,,,,,,,,,,,,
-S16,4,East,Duke,St. John's,,Duke,Duke,,,,,,Duke,Duke,Duke,Duke,Duke,Duke,Duke,St. John's,Duke
-S16,4,East,Michigan St,UConn,,UConn,UConn,,,,,,UConn,UConn,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,UConn
-S16,4,West,Arizona,Arkansas,,Arizona,Arizona,,,,,,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona
-S16,4,West,Texas,Purdue,,Purdue,Purdue,,,,,,Texas,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
-S16,4,South,Iowa,Nebraska,,Nebraska,Nebraska,,,,,,Nebraska,Nebraska,Iowa,Nebraska,Nebraska,Iowa,Nebraska,Nebraska,Nebraska
-S16,4,South,Illinois,Houston,,Houston,Houston,,,,,,Houston,Illinois,Houston,Houston,Houston,Illinois,Illinois,Houston,Houston
-S16,4,Midwest,Michigan,Alabama,,Michigan,Michigan,,,,,,Alabama,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
-S16,4,Midwest,Tennessee,Iowa St,,Iowa St,Iowa St,,,,,,Iowa St,Tennessee,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
+S16,4,East,Duke,St. John's,,Duke,Duke,,,St. John's,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,Duke,St. John's,Duke
+S16,4,East,Michigan St,UConn,,UConn,UConn,,,Michigan St,UConn,Michigan St,UConn,UConn,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,Michigan St,UConn
+S16,4,West,Arizona,Arkansas,,Arizona,Arizona,,,Arkansas,Arizona,Arkansas,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona,Arizona
+S16,4,West,Texas,Purdue,,Purdue,Purdue,,,Purdue,Purdue,Purdue,Texas,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue,Purdue
+S16,4,South,Iowa,Nebraska,,Nebraska,Nebraska,,,Nebraska,Nebraska,Iowa,Nebraska,Nebraska,Iowa,Nebraska,Nebraska,Iowa,Nebraska,Nebraska,Nebraska
+S16,4,South,Illinois,Houston,,Houston,Houston,,,Houston,Houston,Illinois,Houston,Illinois,Houston,Houston,Houston,Illinois,Illinois,Houston,Houston
+S16,4,Midwest,Michigan,Alabama,,Michigan,Michigan,,,Alabama,Michigan,Michigan,Alabama,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
+S16,4,Midwest,Tennessee,Iowa St,,Iowa St,Iowa St,,,Tennessee,Iowa St,Iowa St,Iowa St,Tennessee,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
 Elite 8,8,,,,,,,,,,,,,,,,,,,,
 E8,8,East,,,,,,,,,,,,,,,,,,,
 E8,8,West,,,,,,,,,,,,,,,,,,,
