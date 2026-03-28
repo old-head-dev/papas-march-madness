@@ -59,10 +59,10 @@ S16,4,South,Illinois,Houston,Illinois,Houston,Houston,Houston,Houston,Houston,Ho
 S16,4,Midwest,Michigan,Alabama,Michigan,Michigan,Michigan,Michigan,Michigan,Alabama,Michigan,Michigan,Alabama,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan,Michigan
 S16,4,Midwest,Tennessee,Iowa St,Tennessee,Iowa St,Iowa St,Tennessee,Iowa St,Tennessee,Iowa St,Iowa St,Iowa St,Tennessee,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St,Iowa St
 Elite 8,8,,,,,,,,,,,,,,,,,,,,
-E8,8,East,Duke,UConn,,,,,,,,,,,,,,,,,
-E8,8,West,Arizona,Purdue,,,,,,,,,,,,,,,,,
-E8,8,South,Iowa,Illinois,,,,,,,,,,,,,,,,,
-E8,8,Midwest,Michigan,Tennessee,,,,,,,,,,,,,,,,,
+E8,8,East,Duke,UConn,,,,,,,,,,,,,,,Duke,,
+E8,8,West,Arizona,Purdue,,,,,,,,,,,,,,,Arizona,,
+E8,8,South,Iowa,Illinois,,,,,,,,,,,,,,,Illinois,,
+E8,8,Midwest,Michigan,Tennessee,,,,,,,,,,,,,,,Michigan,,
 Final 4,16,,,,,,,,,,,,,,,,,,,,
 F4,16,Final Four,,,,,,,,,,,,,,,,,,,
 F4,16,Final Four,,,,,,,,,,,,,,,,,,,
