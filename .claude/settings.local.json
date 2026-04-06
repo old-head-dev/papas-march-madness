@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "Bash(python:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git push)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(gh repo:*)",
+      "Bash(gh api:*)",
+      "WebSearch",
+      "WebFetch(domain:old-head-dev.github.io)",
+      "WebFetch(domain:www.ncaa.com)",
+      "WebFetch(domain:www.cbssports.com)",
+      "WebFetch(domain:www.espn.com)",
+      "WebFetch(domain:sports.yahoo.com)",
+      "WebFetch(domain:athlonsports.com)",
+      "mcp__c1fc4002-5f49-5f9d-a4e5-93c4ef5d6a75__google_drive_search",
+      "mcp__Claude_Preview__preview_start",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Edit",
+      "Write",
+      "Read",
+      "Bash(python -c \":*)",
+      "WebFetch(domain:www.covers.com)",
+      "WebFetch(domain:vanderbilthustler.com)",
+      "WebFetch(domain:www.nbcsports.com)",
+      "WebFetch(domain:www.heartlandcollegesports.com)",
+      "WebFetch(domain:www.sportsbettingdime.com)",
+      "WebFetch(domain:vsin.com)",
+      "WebFetch(domain:bamahammer.com)",
+      "WebFetch(domain:www.sports-reference.com)"
+    ]
+  },
+  "outputStyle": "default"
+}

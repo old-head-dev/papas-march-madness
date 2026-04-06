@@ -85,7 +85,7 @@ Claude should:
 7. If any team name is too fuzzy to be 100% certain, explicitly call it out and ask Jon to clarify
 8. After Jon confirms, commit with message like "Add Papa R64 picks" and push
 
-**Common abbreviations to handle**: "Mich St"/"MSU" → "Michigan St", "UNC" → "N. Carolina", "SJU"/"St Johns" → "St. John's", "Nova"/"Villa" → "Villanova", "UVA"/"VA" → "Virginia", "UK"/"KY" → "Kentucky", "Bama"/"AL" → "Alabama", "OSU"/"OHST"/"Ohio State" → "Ohio St", "USF" → "South Florida", "Zags"/"Gonz" → "Gonzaga", "Vandy" → "Vanderbilt", "KU" → "Kansas", "FL" → "Florida", "IL" → "Illinois", "AZ" → "Arizona", "TN" → "Tennessee", "PU" → "Purdue", "MI" → "Michigan", "St Marys" → "Saint Mary's", "Texas AM" → "Texas A&M"
+**Common abbreviations to handle**: "Mich St"/"MSU" → "Michigan St", "UNC" → "N. Carolina", "SJU"/"St Johns" → "St. John's", "Nova"/"Villa" → "Villanova", "UVA"/"VA" → "Virginia", "UK"/"KY" → "Kentucky", "Bama"/"AL" → "Alabama", "OSU"/"OHST"/"Ohio State" → "Ohio St", "USF" → "South Florida", "Zags"/"Gonz" → "Gonzaga", "Vandy" → "Vanderbilt", "KU" → "Kansas", "FL" → "Florida", "IL" → "Illinois", "AZ" → "Arizona", "TN" → "Tennessee", "PU" → "Purdue", "MI" → "Michigan", "St Marys" → "Saint Mary's", "Texas AM" → "Texas A&M", "SLU" → "Saint Louis", "Zona" → "Arizona", "Gonz" → "Gonzaga", "TTU" → "Texas Tech", "IA" → "Iowa St", "St John"/"Saint John" → "St. John's"
 
 **Confirmation protocol**: Zero tolerance for mistakes. Every pick must be verified correct. Flag upset picks (lower seed over higher seed) in the confirmation table. Note all fuzzy matches made.
 
@@ -143,13 +143,12 @@ When Claude enters a game result (Actual_Winner):
 - **South 16-seed**: Prairie View A&M → Prairie View → plays (1) Florida
 - **Midwest 11-seed**: Miami (Ohio) → plays (6) Tennessee
 
-## Current Status (as of March 19, 2026)
+## Current Status (as of March 21, 2026)
 
-- All 16 participants have R64 picks entered
-- All 4 First Four play-in games resolved
-- Tournament starts March 19 (today)
+- R64 complete — all 32 games decided, all R32 matchups populated
+- R32 picks being entered (12 of 16 participants done)
 - Dashboard live at https://old-head-dev.github.io/papas-march-madness/
-- **TEST DATA**: TCU, Duke, and Louisville currently set as test winners in bracket.csv — REVERT before real games
+- R32 games start Saturday March 22
 
 ## Dashboard Features
 
@@ -164,3 +163,9 @@ When Claude enters a game result (Actual_Winner):
 ## Jon's Google Sheet
 
 Jon maintains a separate Google Sheet for personal tracking with Excel formulas. Claude does NOT update the Google Sheet — only bracket.csv.
+
+## Verify Before Done
+
+- Data: open `bracket.csv` and confirm all picks/winners are correct — read back any manual entries to the user
+- Local test: open `index.html` in a browser, verify scores render correctly and no console errors
+- Deploy: `git push` to main, then verify the live GitHub Pages URL loads with updated data
